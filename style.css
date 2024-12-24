@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle, #001d3d, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.solar-system {
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    background: radial-gradient(circle, #020024, #001133);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.1);
+}
+
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffdd33, #ff9900, #dd5500);
+    border-radius: 50%;
+    box-shadow: 0 0 80px #ffdd33, 0 0 200px #ff9900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.mercury-orbit { width: 120px; height: 120px; }
+.venus-orbit { width: 200px; height: 200px; }
+.earth-orbit { width: 280px; height: 280px; }
+.mars-orbit { width: 360px; height: 360px; }
+.jupiter-orbit { width: 500px; height: 500px; }
+.saturn-orbit { width: 600px; height: 600px; }
+.uranus-orbit { width: 700px; height: 700px; }
+.neptune-orbit { width: 800px; height: 800px; }
+
+.planet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffffff, #000000);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+}
+
+.mercury { background: #b8b8b8; width: 6px; height: 6px; }
+.venus { background: #e3c16f; width: 12px; height: 12px; }
+.earth { background: #3d9be9; }
+.mars { background: #d14b27; }
+.jupiter { background: #e2b46f; width: 40px; height: 40px; }
+.saturn { background: #d8a253; width: 34px; height: 34px; }
+.uranus { background: #6dc2c2; width: 28px; height: 28px; }
+.neptune { background: #3b6dd1; width: 30px; height: 30px; }
+
+.ring {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(200, 150, 100, 0.8);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.moon {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 30%;
+    left: 30%;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    to {
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
